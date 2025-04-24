@@ -1,9 +1,5 @@
 # Multivariate-Time-Series-Data-Collection-Technology
 
-以下是一个根据你提供的仓库截图内容生成的 README，涵盖了目录结构、数据集、使用方法等内容：
-
-# Multivariate-Time-Series-Data-Collection-Technology
-
 ## 项目简介
 
 这是一个关于多变量时间序列数据收集技术的项目，旨在提供高效、准确的多变量时间序列数据收集工具，适用于数据分析、机器学习、时间序列预测等场景。
