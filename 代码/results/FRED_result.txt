@@ -1,0 +1,165 @@
+
+==================================================
+数据集基本信息:
+总记录数: 794
+列数: 10
+列名: ['sasdate', 'RPI', 'W875RX1', 'DPCERA3M086SBEA', 'CMRMTSPLx', 'RETAILx', 'INDPRO', 'IPFPNSS', 'IPFINAL', 'IPCONGD']
+
+缺失值比例:
+RPI                0.000000
+W875RX1            0.000000
+DPCERA3M086SBEA    0.000000
+CMRMTSPLx          0.001259
+RETAILx            0.000000
+INDPRO             0.000000
+IPFPNSS            0.000000
+IPFINAL            0.000000
+IPCONGD            0.000000
+dtype: float64
+
+时间间隔统计:
+最小间隔: 28 days 00:00:00
+最大间隔: 31 days 00:00:00
+中位数间隔: 31 days 00:00:00
+间隔是否一致: 否
+
+=== 列 'RPI' 的平稳性测试 ===
+ADF统计量: 2.6239, p值: 0.9991
+KPSS统计量: 4.1737, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'W875RX1' 的平稳性测试 ===
+ADF统计量: 2.4621, p值: 0.9990
+KPSS统计量: 4.2067, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'DPCERA3M086SBEA' 的平稳性测试 ===
+ADF统计量: 3.2633, p值: 1.0000
+KPSS统计量: 4.2025, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'CMRMTSPLx' 的平稳性测试 ===
+ADF统计量: 0.5143, p值: 0.9853
+KPSS统计量: 4.2343, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'RETAILx' 的平稳性测试 ===
+ADF统计量: 3.5073, p值: 1.0000
+KPSS统计量: 4.1862, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'INDPRO' 的平稳性测试 ===
+ADF统计量: -0.9806, p值: 0.7603
+KPSS统计量: 4.2092, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'IPFPNSS' 的平稳性测试 ===
+ADF统计量: -1.4746, p值: 0.5460
+KPSS统计量: 4.1067, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'IPFINAL' 的平稳性测试 ===
+ADF统计量: -1.4789, p值: 0.5439
+KPSS统计量: 4.1472, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'IPCONGD' 的平稳性测试 ===
+ADF统计量: -2.1941, p值: 0.2084
+KPSS统计量: 3.9555, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+==================================================
+数据集适合度评分: 0.70/1.0
+结论: 基本适合，可能需要一些预处理
+
+=== 测试结果 ===
+适合度评分: 0.70/1.0
+热力图路径: results\FRED_corr_heatmap.png
+       sasdate  T10YFFM  T5YFFM  T1YFFM  COMPAPFFx  HWIURATIO
+0     1/1/1959     1.54    1.53    0.88       0.82   0.333579
+1     2/1/1959     1.53    1.53    1.11       0.83   0.358386
+2     3/1/1959     1.19    1.19    0.81       0.55   0.400947
+3     4/1/1959     1.16    1.16    0.76       0.46   0.444973
+4     5/1/1959     1.41    1.45    1.06       0.66   0.475711
+..         ...      ...     ...     ...        ...        ...
+789  10/1/2024    -0.73   -0.92   -0.63      -0.21   1.092226
+790  11/1/2024    -0.29   -0.42   -0.32      -0.11   1.127791
+791  12/1/2024    -0.09   -0.23   -0.25      -0.02   1.090328
+792   1/1/2025     0.30    0.10   -0.15       0.00   1.130092
+793   2/1/2025     0.12   -0.05   -0.14       0.01        NaN
+
+[794 rows x 6 columns]
+✅ 推断频率: 'M'  (≈ 2592000 秒, 检测到 ≈ 2678400.00 秒)
+推断频率: M
+
+处理列 'T10YFFM' 的季节性和趋势...
+
+处理列 'T5YFFM' 的季节性和趋势...
+
+处理列 'T1YFFM' 的季节性和趋势...
+
+处理列 'COMPAPFFx' 的季节性和趋势...
+
+处理列 'HWIURATIO' 的季节性和趋势...
+
+检查数据的自相关性...
+生成自相关图: results\autocorr_plots\FRED_T10YFFM_ACF_PACF.png
+生成自相关图: results\autocorr_plots\FRED_T5YFFM_ACF_PACF.png
+生成自相关图: results\autocorr_plots\FRED_T1YFFM_ACF_PACF.png
+生成自相关图: results\autocorr_plots\FRED_COMPAPFFx_ACF_PACF.png
+生成自相关图: results\autocorr_plots\FRED_HWIURATIO_ACF_PACF.png
+
+=== 测试集比例 0.1 ===
+0.6835443037974683
+
+=== 测试集比例 0.11 ===
+0.6735632183908046
+
+=== 测试集比例 0.12 ===
+0.6778947368421053
+
+=== 测试集比例 0.13 ===
+0.6737864077669904
+
+=== 测试集比例 0.14 ===
+0.6792792792792793
+
+=== 测试集比例 0.15 ===
+0.7008403361344538
+
+最佳测试集比例: 0.15, 准确率: 0.7008
+
+正在运行exact_algorithm算法...
+
+正在运行approximate_algorithm算法...
+
+最终结果汇总:
+
+exact_algorithm算法:
+平均RMS: 0.0474
+平均准确率: 0.7882
+总耗时: 28.62秒
+平均CPU利用率: 12.19%
+平均内存增量: 0.00 MB
+
+approximate_algorithm算法:
+平均RMS: 0.2787
+平均准确率: 0.5412
+总耗时: 26.49秒
+平均CPU利用率: 6.56%
+平均内存增量: 0.00 MB
+
+数据集元数据:
+样本数量: 794
+特征数量: 5
+最佳滞后阶数: 9
+总运行时间: 195.70秒

@@ -1,0 +1,151 @@
+
+==================================================
+数据集基本信息:
+总记录数: 966
+列数: 8
+列名: ['date', '% WEIGHTED ILI', '%UNWEIGHTED ILI', 'AGE 0-4', 'AGE 5-24', 'ILITOTAL', 'NUM. OF PROVIDERS', 'OT']
+
+缺失值比例:
+% WEIGHTED ILI       0.0
+%UNWEIGHTED ILI      0.0
+AGE 0-4              0.0
+AGE 5-24             0.0
+ILITOTAL             0.0
+NUM. OF PROVIDERS    0.0
+OT                   0.0
+dtype: float64
+
+时间间隔统计:
+最小间隔: 7 days 00:00:00
+最大间隔: 7 days 00:00:00
+中位数间隔: 7 days 00:00:00
+间隔是否一致: 是
+
+=== 列 '% WEIGHTED ILI' 的平稳性测试 ===
+ADF统计量: -7.8465, p值: 0.0000
+KPSS统计量: 0.1857, p值: 0.1000
+是否平稳: 是
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 '%UNWEIGHTED ILI' 的平稳性测试 ===
+ADF统计量: -7.7465, p值: 0.0000
+KPSS统计量: 0.3008, p值: 0.1000
+是否平稳: 是
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'AGE 0-4' 的平稳性测试 ===
+ADF统计量: -6.5071, p值: 0.0000
+KPSS统计量: 1.6179, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'AGE 5-24' 的平稳性测试 ===
+ADF统计量: -6.3826, p值: 0.0000
+KPSS统计量: 1.2751, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'ILITOTAL' 的平稳性测试 ===
+ADF统计量: -6.1613, p值: 0.0000
+KPSS统计量: 1.7705, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'NUM. OF PROVIDERS' 的平稳性测试 ===
+ADF统计量: -1.7133, p值: 0.4243
+KPSS统计量: 3.6161, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+=== 列 'OT' 的平稳性测试 ===
+ADF统计量: -0.9819, p值: 0.7598
+KPSS统计量: 4.0449, p值: 0.0100
+是否平稳: 否
+季节性分析失败: period must be a positive integer >= 2
+
+==================================================
+数据集适合度评分: 0.86/1.0
+结论: 非常适合此算法
+
+=== 测试结果 ===
+适合度评分: 0.86/1.0
+热力图路径: results\national_illness_corr_heatmap.png
+                    date  AGE 5-24  % WEIGHTED ILI  AGE 0-4  NUM. OF PROVIDERS  %UNWEIGHTED ILI
+0    2002-01-01 00:00:00       805        1.222620      582                754         1.166680
+1    2002-01-08 00:00:00       872        1.333440      683                785         1.216500
+2    2002-01-15 00:00:00       878        1.319290      642                831         1.130570
+3    2002-01-22 00:00:00      1045        1.494840      728                863         1.252460
+4    2002-01-29 00:00:00      1189        1.471950      823                909         1.302370
+..                   ...       ...             ...      ...                ...              ...
+961  2020-06-02 00:00:00      3528        0.839059     2756               3258         0.846722
+962  2020-06-09 00:00:00      3778        0.895958     3203               3254         0.908885
+963  2020-06-16 00:00:00      3796        0.910926     3478               3177         0.941625
+964  2020-06-23 00:00:00      3818        0.946945     3734               3066         0.972185
+965  2020-06-30 00:00:00      3843        0.963716     3955               3027         1.013760
+
+[966 rows x 6 columns]
+✅ 推断频率: 'W'  (≈ 604800 秒, 检测到 ≈ 604800.00 秒)
+推断频率: W
+
+处理列 'AGE 5-24' 的季节性和趋势...
+
+处理列 '% WEIGHTED ILI' 的季节性和趋势...
+
+处理列 'AGE 0-4' 的季节性和趋势...
+
+处理列 'NUM. OF PROVIDERS' 的季节性和趋势...
+
+处理列 '%UNWEIGHTED ILI' 的季节性和趋势...
+
+检查数据的自相关性...
+生成自相关图: results\autocorr_plots\national_illness_AGE 5-24_ACF_PACF.png
+生成自相关图: results\autocorr_plots\national_illness_% WEIGHTED ILI_ACF_PACF.png
+生成自相关图: results\autocorr_plots\national_illness_AGE 0-4_ACF_PACF.png
+生成自相关图: results\autocorr_plots\national_illness_NUM. OF PROVIDERS_ACF_PACF.png
+生成自相关图: results\autocorr_plots\national_illness_%UNWEIGHTED ILI_ACF_PACF.png
+
+=== 测试集比例 0.1 ===
+0.9083333333333332
+
+=== 测试集比例 0.11 ===
+0.9169811320754716
+
+=== 测试集比例 0.12 ===
+0.9234782608695651
+
+=== 测试集比例 0.13 ===
+0.9135999999999999
+
+=== 测试集比例 0.14 ===
+0.9111111111111111
+
+=== 测试集比例 0.15 ===
+0.9124999999999999
+
+最佳测试集比例: 0.12, 准确率: 0.9235
+
+正在运行exact_algorithm算法...
+
+正在运行approximate_algorithm算法...
+
+最终结果汇总:
+
+exact_algorithm算法:
+平均RMS: 17.9740
+平均准确率: 0.9809
+总耗时: 27.76秒
+平均CPU利用率: 11.62%
+平均内存增量: 0.01 MB
+
+approximate_algorithm算法:
+平均RMS: 1657.4827
+平均准确率: 0.8000
+总耗时: 25.32秒
+平均CPU利用率: 4.68%
+平均内存增量: 0.00 MB
+
+数据集元数据:
+样本数量: 966
+特征数量: 5
+最佳滞后阶数: 14
+总运行时间: 225.74秒
